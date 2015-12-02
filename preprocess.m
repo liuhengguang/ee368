@@ -13,12 +13,12 @@ end
 img_size = [200, 200]; 
 
 if nargin == 1
-    xmlfile = fullfile(mexopencv.root(),'test','haarcascade_frontalface_alt2.xml');
-    face_cascade = cv.CascadeClassifier(xmlfile); 
-    boxes = face_cascade.detect(uint8(img));
-    box = boxes{1};  
+   xmlfile = 'res/haarcascade_frontalface_alt2.xml';
+   face_cascade = vision.CascadeObjectDetector(xmlfile); 
+   boxes = step(face_cascade, uint8(img));
+   box = boxes(1,:);  
 else
-    box = bounding_box; 
+   box = bounding_box; 
 end
 % Detect the Face
 
@@ -33,10 +33,7 @@ processed_img = processed_img(y:y+length, x:x+length);
 processed_img = imresize(processed_img, img_size); 
 
 % Tan Triggs 
-% processed_img = tantriggs(processed_img); 
-
-% MM Preprocessing
-
+processed_img = tantriggs(processed_img); 
 
 end
 

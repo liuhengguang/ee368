@@ -33,7 +33,7 @@ m_test_indices = male_indices((NUM_MALE - NUM_TEST + 1):NUM_MALE);
 % emotions = {'Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise'};  \
 emotions = {'Happy', 'Sad'}; 
 emotionLabels = 1:numel(emotions); 
-baseFileName = '~/Desktop/cs232/Project/generated_dataset/all_subject_images/'; 
+baseFileName = 'generated_dataset/all_subject_images/'; 
 % Loop through all emotions
 for emotionsIndex = emotionLabels
     training_labels = [training_labels ones(1, NUM_F_TRAIN + NUM_M_TRAIN) * emotionsIndex]; 
