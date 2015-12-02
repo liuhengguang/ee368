@@ -160,7 +160,7 @@ end
 % mdl = fitcecoc(projected_fisher_images', training_labels); 
 % control_predictions = predict(mdl, projected_fisher_control')'; 
 % test_predictions = predict(mdl, projected_fisher_test')'; 
-%%
+
 histogram(projected_fisher_test(testing_labels==1), 20); 
 figure
 histogram(projected_fisher_test(testing_labels==2), 20); 
