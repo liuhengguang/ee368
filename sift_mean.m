@@ -97,6 +97,6 @@ figure(nImage); clf; set(gcf, 'Position', [50 50 400 300]);
 h = plot(repmat(illumInt',1, num_emotions), (all_repeatability)'); grid on;
 set(h, 'MarkerFaceColor', 'b');
 xlabel('Condition'); ylabel('Repeatability');
-title(['Robustness to Illumination/Shading: No Preprocessing']);
+title(['Robustness to Illumination/Shading: MM Preprocessing']);
 legend('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise'); 
 axis([0 4 0 1]);

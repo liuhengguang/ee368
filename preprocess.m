@@ -33,7 +33,10 @@ processed_img = processed_img(y:y+length, x:x+length);
 processed_img = imresize(processed_img, img_size); 
 
 % Tan Triggs 
-processed_img = tantriggs(processed_img); 
+%processed_img = tantriggs(processed_img, 2);
+
+% MM Preprocessing
+processed_img = mm_preprocessing(processed_img);
 
 end
 

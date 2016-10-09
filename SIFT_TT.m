@@ -72,8 +72,8 @@ for nImage = 1:length(imageFiles)
         % Plots points have matches
         imshow(condImg, []); 
         hold on 
-        plot(xc(isFound), yc(isFound), 'g.'); 
-        plot(xc(~isFound), yc(~isFound), 'r.'); 
+        plot(xc(isFound), yc(isFound), 'g.','MarkerSize',50); 
+        plot(xc(~isFound), yc(~isFound), 'r.','MarkerSize',50); 
         hold off 
         %  sift_match(imgOrig, condImg);
         pause;
